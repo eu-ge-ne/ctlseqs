@@ -7,6 +7,7 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=eu-ge-ne_ctlseqs&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=eu-ge-ne_ctlseqs)
 
 - [API](#api)
+  - [`cup()`](#cup)
   - [`decsc`](#decsc)
   - [`decrc`](#decrc)
   - [`ris`](#ris)
@@ -14,6 +15,18 @@
 - [License](#license)
 
 ## API
+
+### `cup()`
+
+Cursor Position (CUP)
+
+- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86>
+
+Syntax
+
+```ts ignore
+function cup(row: number, col: number): Uint8Array;
+```
 
 ### `decsc`
 
