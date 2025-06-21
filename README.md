@@ -1,5 +1,7 @@
 # @eu-ge-ne/ctlseqs
 
+XTerm Control Sequences for Node.js, Deno and Bun.
+
 [![JSR](https://jsr.io/badges/@eu-ge-ne/ctlseqs)](https://jsr.io/@eu-ge-ne/ctlseqs)
 [![JSR Score](https://jsr.io/badges/@eu-ge-ne/ctlseqs/score)](https://jsr.io/@eu-ge-ne/ctlseqs)
 [![codecov](https://codecov.io/gh/eu-ge-ne/ctlseqs/branch/main/graph/badge.svg?token=S2ZTAMYN6B)](https://codecov.io/gh/eu-ge-ne/ctlseqs)
