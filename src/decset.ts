@@ -10,6 +10,8 @@ export function decset(mode: DECSetMode): Uint8Array {
 }
 
 /**
+ * DEC Private Mode
+ *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h.1D0E}
  */
 export const enum DECSetMode {
