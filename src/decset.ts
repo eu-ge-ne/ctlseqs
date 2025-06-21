@@ -9,7 +9,7 @@ export function decset(...modes: DECSetMode[]): Uint8Array {
   if (modes.length === 0) {
     return empty;
   }
-  return encoder.encode(`\x1B[?${modes.join(";")}h`);
+  return encoder.encode(`\x1b[?${modes.join(";")}h`);
 }
 
 /**
@@ -31,4 +31,11 @@ export const enum DECSetMode {
    * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-4-9.1F85}
    */
   P1049 = 1049,
+
+  /**
+   * Begin synchronized update
+   *
+   * @see {@link https://gist.github.com/christianparpart/d8a62cc1ab659194337d73e399004036}
+   */
+  BSU = 2026,
 }
