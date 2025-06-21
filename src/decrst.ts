@@ -9,7 +9,7 @@ export function decrst(...modes: DECResetMode[]): Uint8Array {
   if (modes.length === 0) {
     return empty;
   }
-  return encoder.encode(`\x1B[?${modes.join(";")}l`);
+  return encoder.encode(`\x1b[?${modes.join(";")}l`);
 }
 
 /**
@@ -31,4 +31,11 @@ export const enum DECResetMode {
    * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l:Ps-=-1-0-4-9.1F89}
    */
   P1049 = 1049,
+
+  /**
+   * End synchronized update
+   *
+   * @see {@link https://gist.github.com/christianparpart/d8a62cc1ab659194337d73e399004036}
+   */
+  ESU = 2026,
 }
