@@ -63,7 +63,7 @@ const decrc: Uint8Array;
 Syntax
 
 ```ts ignore
-function decset(mode: DECSetMode): Uint8Array;
+function decset(...modes: DECSetMode[]): Uint8Array;
 ```
 
 [DEC Private Mode Reset (DECRST)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l.1D12)
@@ -71,7 +71,7 @@ function decset(mode: DECSetMode): Uint8Array;
 Syntax
 
 ```ts ignore
-function decrst(mode: DECResetMode): Uint8Array;
+function decrst(...modes: DECResetMode[]): Uint8Array;
 ```
 
 ## Links
