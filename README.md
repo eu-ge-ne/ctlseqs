@@ -9,14 +9,24 @@ XTerm Control Sequences for Node.js, Deno and Bun.
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=eu-ge-ne_ctlseqs&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=eu-ge-ne_ctlseqs)
 
 - [API](#api)
-  - [`cup()`](#cup)
-  - [`decsc`](#decsc)
-  - [`decrc`](#decrc)
   - [`ris`](#ris)
+  - [`cup()`](#cup)
+  - [`decsc / decrc`](#decsc--decrc)
+  - [`decset() / decrst()`](#decset--decrst)
 - [Links](#links)
 - [License](#license)
 
 ## API
+
+### `ris`
+
+[Full Reset (RIS)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-c.C91)
+
+Syntax
+
+```ts ignore
+const ris: Uint8Array;
+```
 
 ### `cup()`
 
@@ -28,7 +38,7 @@ Syntax
 function cup(row: number, col: number): Uint8Array;
 ```
 
-### `decsc`
+### `decsc / decrc`
 
 [Save Cursor (DECSC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65)
 
@@ -38,8 +48,6 @@ Syntax
 const decsc: Uint8Array;
 ```
 
-### `decrc`
-
 [Restore Cursor (DECRC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66)
 
 Syntax
@@ -48,14 +56,22 @@ Syntax
 const decrc: Uint8Array;
 ```
 
-### `ris`
+### `decset() / decrst()`
 
-[Full Reset (RIS)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-c.C91)
+[DEC Private Mode Set (DECSET)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h.1D0E)
 
 Syntax
 
 ```ts ignore
-const ris: Uint8Array;
+function decset(mode: DECSetMode): Uint8Array;
+```
+
+[DEC Private Mode Reset (DECRST)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-l.1D12)
+
+Syntax
+
+```ts ignore
+function decrst(mode: DECResetMode): Uint8Array;
 ```
 
 ## Links
