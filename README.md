@@ -62,7 +62,6 @@ const ris: Uint8Array;
 
 - <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html>
 - <https://vt100.net/docs/vt100-ug>
-- <https://vt100.net/docs/vt510-rm>
 
 ## License
 
