@@ -16,6 +16,13 @@ export function decset(mode: DECSetMode): Uint8Array {
  */
 export const enum DECSetMode {
   /**
+   * Save cursor as in DECSC, xterm. This may be disabled by the titeInhibit resource.
+   *
+   * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-4-8.1F84}
+   */
+  P1048 = 1048,
+
+  /**
    * Save cursor as in DECSC, xterm. After saving the cursor, switch to the Alternate Screen Buffer, clearing it first. This may be disabled by the titeInhibit resource. This control combines the effects of the 1047 and 1048  modes. Use this with terminfo-based applications rather than the 47 mode.
    *
    * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h:Ps-=-1-0-4-9.1F85}
