@@ -18,9 +18,7 @@
 
 ### `cup()`
 
-Cursor Position (CUP)
-
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86>
+[Cursor Position (CUP)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86)
 
 Syntax
 
@@ -30,9 +28,7 @@ function cup(row: number, col: number): Uint8Array;
 
 ### `decsc`
 
-Save Cursor (DECSC)
-
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65>
+[Save Cursor (DECSC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65)
 
 Syntax
 
@@ -42,9 +38,7 @@ const decsc: Uint8Array;
 
 ### `decrc`
 
-Restore Cursor (DECRC)
-
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66>
+[Restore Cursor (DECRC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66)
 
 Syntax
 
@@ -54,9 +48,7 @@ const decrc: Uint8Array;
 
 ### `ris`
 
-Full Reset (RIS)
-
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-c.C91>
+[Full Reset (RIS)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-c.C91)
 
 Syntax
 
