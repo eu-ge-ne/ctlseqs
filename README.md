@@ -7,11 +7,37 @@
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=eu-ge-ne_ctlseqs&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=eu-ge-ne_ctlseqs)
 
 - [API](#api)
+  - [`decsc`](#decsc)
+  - [`decrc`](#decrc)
   - [`ris`](#ris)
 - [Links](#links)
 - [License](#license)
 
 ## API
+
+### `decsc`
+
+Save Cursor (DECSC)
+
+Syntax
+
+```ts ignore
+const decsc: Uint8Array;
+```
+
+- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65>
+
+### `decrc`
+
+Restore Cursor (DECRC)
+
+Syntax
+
+```ts ignore
+const decrc: Uint8Array;
+```
+
+- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66>
 
 ### `ris`
 
