@@ -2,7 +2,7 @@
 
 [![JSR](https://jsr.io/badges/@eu-ge-ne/ctlseqs)](https://jsr.io/@eu-ge-ne/ctlseqs)
 [![JSR Score](https://jsr.io/badges/@eu-ge-ne/ctlseqs/score)](https://jsr.io/@eu-ge-ne/ctlseqs)
-[![codecov](https://codecov.io/gh/eu-ge-ne/ctlseqs/branch/main/graph/badge.svg?token=UB8NOWXORR)](https://codecov.io/gh/eu-ge-ne/ctlseqs)
+[![codecov](https://codecov.io/gh/eu-ge-ne/ctlseqs/branch/main/graph/badge.svg?token=S2ZTAMYN6B)](https://codecov.io/gh/eu-ge-ne/ctlseqs)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=eu-ge-ne_ctlseqs&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=eu-ge-ne_ctlseqs)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=eu-ge-ne_ctlseqs&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=eu-ge-ne_ctlseqs)
 
@@ -19,17 +19,19 @@
 
 Save Cursor (DECSC)
 
+- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65>
+
 Syntax
 
 ```ts ignore
 const decsc: Uint8Array;
 ```
 
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65>
-
 ### `decrc`
 
 Restore Cursor (DECRC)
+
+- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66>
 
 Syntax
 
@@ -37,19 +39,17 @@ Syntax
 const decrc: Uint8Array;
 ```
 
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66>
-
 ### `ris`
 
 Full Reset (RIS)
+
+- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-c.C91>
 
 Syntax
 
 ```ts ignore
 const ris: Uint8Array;
 ```
-
-- <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-c.C91>
 
 ## Links
 
