@@ -8,8 +8,8 @@ Deno.test("sgr", () => {
   assertEquals(bytes, new TextEncoder().encode("\x1b[m"));
 });
 
-Deno.test("sgr normal", () => {
-  const bytes = sgr(SGRAttr.Normal);
+Deno.test("sgr default", () => {
+  const bytes = sgr(SGRAttr.Default);
 
   assertEquals(bytes, new TextEncoder().encode("\x1b[0m"));
 });

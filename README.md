@@ -79,6 +79,12 @@ function decrst(...modes: DECResetMode[]): Uint8Array;
 
 [Character Attributes (SGR)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7)
 
+Syntax
+
+```ts ignore
+function sgr(...attrs: (SGRAttr | SGRColor)[]): Uint8Array;
+```
+
 ## Links
 
 - <https://invisible-island.net/xterm/ctlseqs/ctlseqs.html>
