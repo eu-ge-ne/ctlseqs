@@ -22,8 +22,18 @@ export function sgr(...attrs: (SGRAttr | SGRColor)[]): Uint8Array {
   return encoder.encode(`\x1b[${y.join(";")}m`);
 }
 
+/**
+ * SGR RGB color
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
+ */
 export type SGRColor = ["fg" | "bg", number, number, number];
 
+/**
+ * SGR Attributes
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
+ */
 export const enum SGRAttr {
   Normal = 0,
   Bold = 1,
