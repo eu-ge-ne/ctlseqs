@@ -13,6 +13,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
   - [`cup()`](#cup)
   - [`decsc / decrc`](#decsc--decrc)
   - [`decset() / decrst()`](#decset--decrst)
+  - [`sgr()`](#sgr)
 - [Links](#links)
 - [License](#license)
 
@@ -73,6 +74,10 @@ Syntax
 ```ts ignore
 function decrst(...modes: DECResetMode[]): Uint8Array;
 ```
+
+### `sgr()`
+
+[Character Attributes (SGR)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7)
 
 ## Links
 
