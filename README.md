@@ -10,6 +10,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
 
 - [API](#api)
   - [`ris`](#ris)
+  - [`el`](#el)
   - [`cup()`](#cup)
   - [`decsc / decrc`](#decsc--decrc)
   - [`decset() / decrst()`](#decset--decrst)
@@ -27,6 +28,20 @@ Syntax
 
 ```ts ignore
 const ris: Uint8Array;
+```
+
+### `el`
+
+[Erase in Line (EL)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-K.1C8B)
+
+Syntax
+
+```ts ignore
+const el0: Uint8Array;
+
+const el1: Uint8Array;
+
+const el2: Uint8Array;
 ```
 
 ### `cup()`
