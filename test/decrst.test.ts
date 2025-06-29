@@ -9,7 +9,7 @@ Deno.test("decrst", () => {
 });
 
 Deno.test("decrst mode", () => {
-  const bytes = decrst(DECResetMode.P1049);
+  const bytes = decrst(DECResetMode.ALTSCR);
 
   assertEquals(bytes, new TextEncoder().encode("\x1b[?1049l"));
 });

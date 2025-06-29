@@ -9,7 +9,7 @@ Deno.test("decset", () => {
 });
 
 Deno.test("decset mode", () => {
-  const bytes = decset(DECSetMode.P1049);
+  const bytes = decset(DECSetMode.ALTSCR);
 
   assertEquals(bytes, new TextEncoder().encode("\x1b[?1049h"));
 });
