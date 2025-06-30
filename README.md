@@ -15,6 +15,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
   - [`decsc / decrc`](#decsc--decrc)
   - [`decset() / decrst()`](#decset--decrst)
   - [`sgr()`](#sgr)
+  - [`ech()`](#ech)
 - [Links](#links)
 - [License](#license)
 
@@ -98,6 +99,16 @@ Syntax
 
 ```ts ignore
 function sgr(...attrs: (SGRAttr | SGRColor)[]): Uint8Array;
+```
+
+### `ech()`
+
+[Erase Ps Character(s) (ECH)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-X.1C98)
+
+Syntax
+
+```ts ignore
+function ech(n: number): Uint8Array;
 ```
 
 ## Links
