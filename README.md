@@ -103,7 +103,7 @@ function sgr(...attrs: (SGRAttr | SGRColor)[]): Uint8Array;
 
 ### `ech()`
 
-[Erase Ps Character(s) (ECH)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-X.1C98)
+[Erase Character(s) (ECH)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-X.1C98)
 
 Syntax
 
