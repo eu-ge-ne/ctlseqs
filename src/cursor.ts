@@ -24,7 +24,7 @@ export function cuu(n: number): Uint8Array {
 export const cud1: Uint8Array = encoder.encode("\x1b[B");
 
 /**
- * Cursor Down Ps Times (CUD)
+ * Cursor Down (CUD)
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-B.1C82}
  */
@@ -40,7 +40,7 @@ export function cud(n: number): Uint8Array {
 export const cuf1: Uint8Array = encoder.encode("\x1b[C");
 
 /**
- * Cursor Forward Ps Times (CUF)
+ * Cursor Forward (CUF)
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-C.1C83}
  */
@@ -56,7 +56,7 @@ export function cuf(n: number): Uint8Array {
 export const cub1: Uint8Array = encoder.encode("\x1b[D");
 
 /**
- * Cursor Backward Ps Times (CUB)
+ * Cursor Backward (CUB)
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-D.1C84}
  */

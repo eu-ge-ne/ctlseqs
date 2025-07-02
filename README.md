@@ -57,6 +57,16 @@ const cuu1: Uint8Array;
 function cuu(n: number): Uint8Array;
 ```
 
+[Cursor Down (CUD)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-B.1C82)
+
+Syntax
+
+```ts ignore
+const cud1: Uint8Array;
+
+function cud(n: number): Uint8Array;
+```
+
 [Cursor Position (CUP)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86)
 
 Syntax
