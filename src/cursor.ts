@@ -2,11 +2,15 @@ import { encoder } from "./encoder.ts";
 
 /**
  * Cursor Up (CUU)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export const cuu1 = encoder.encode("\x1b[A");
 
 /**
  * Cursor Up Ps Times (CUU)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export function cuu(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}A`);
@@ -14,11 +18,15 @@ export function cuu(n: number): Uint8Array {
 
 /**
  * Cursor Down (CUD)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export const cud1 = encoder.encode("\x1b[B");
 
 /**
  * Cursor Down Ps Times (CUD)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export function cud(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}B`);
@@ -26,11 +34,15 @@ export function cud(n: number): Uint8Array {
 
 /**
  * Cursor Forward (CUF)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export const cuf1 = encoder.encode("\x1b[C");
 
 /**
  * Cursor Forward Ps Times (CUF)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export function cuf(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}C`);
@@ -38,11 +50,15 @@ export function cuf(n: number): Uint8Array {
 
 /**
  * Cursor Backward (CUB)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export const cub1 = encoder.encode("\x1b[D");
 
 /**
  * Cursor Backward Ps Times (CUB)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
  */
 export function cub(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}D`);
