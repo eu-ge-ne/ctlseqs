@@ -11,7 +11,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
 - [API](#api)
   - [`ris`](#ris)
   - [`el`](#el)
-  - [`cup()`](#cup)
+  - [`cuu() / cud() / cuf() / cub() / cup()`](#cuu--cud--cuf--cub--cup)
   - [`decsc / decrc`](#decsc--decrc)
   - [`decset() / decrst()`](#decset--decrst)
   - [`sgr()`](#sgr)
@@ -45,7 +45,47 @@ const el1: Uint8Array;
 const el2: Uint8Array;
 ```
 
-### `cup()`
+### `cuu() / cud() / cuf() / cub() / cup()`
+
+[Cursor Up (CUU)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81)
+
+Syntax
+
+```ts ignore
+const cuu1: Uint8Array;
+
+function cuu(n: number): Uint8Array;
+```
+
+[Cursor Down (CUD)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-B.1C82)
+
+Syntax
+
+```ts ignore
+const cud1: Uint8Array;
+
+function cud(n: number): Uint8Array;
+```
+
+[Cursor Forward (CUF)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-C.1C83)
+
+Syntax
+
+```ts ignore
+const cuf1: Uint8Array;
+
+function cuf(n: number): Uint8Array;
+```
+
+[Cursor Backward (CUB)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-D.1C84)
+
+Syntax
+
+```ts ignore
+const cub1: Uint8Array;
+
+function cub(n: number): Uint8Array;
+```
 
 [Cursor Position (CUP)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86)
 
