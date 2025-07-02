@@ -5,7 +5,7 @@ import { encoder } from "./encoder.ts";
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81}
  */
-export const cuu1 = encoder.encode("\x1b[A");
+export const cuu1: Uint8Array = encoder.encode("\x1b[A");
 
 /**
  * Cursor Up Ps Times (CUU)
@@ -19,14 +19,14 @@ export function cuu(n: number): Uint8Array {
 /**
  * Cursor Down (CUD)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-B.1C82}
  */
-export const cud1 = encoder.encode("\x1b[B");
+export const cud1: Uint8Array = encoder.encode("\x1b[B");
 
 /**
  * Cursor Down Ps Times (CUD)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-B.1C82}
  */
 export function cud(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}B`);
@@ -35,14 +35,14 @@ export function cud(n: number): Uint8Array {
 /**
  * Cursor Forward (CUF)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-C.1C83}
  */
-export const cuf1 = encoder.encode("\x1b[C");
+export const cuf1: Uint8Array = encoder.encode("\x1b[C");
 
 /**
  * Cursor Forward Ps Times (CUF)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-C.1C83}
  */
 export function cuf(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}C`);
@@ -51,14 +51,14 @@ export function cuf(n: number): Uint8Array {
 /**
  * Cursor Backward (CUB)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-D.1C84}
  */
-export const cub1 = encoder.encode("\x1b[D");
+export const cub1: Uint8Array = encoder.encode("\x1b[D");
 
 /**
  * Cursor Backward Ps Times (CUB)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-D.1C84}
  */
 export function cub(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}D`);
