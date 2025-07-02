@@ -8,7 +8,7 @@ import { encoder } from "./encoder.ts";
 export const cuu1: Uint8Array = encoder.encode("\x1b[A");
 
 /**
- * Cursor Up Ps Times (CUU)
+ * Cursor Up (CUU)
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81}
  */
