@@ -1,0 +1,58 @@
+import { encoder } from "./encoder.ts";
+
+/**
+ * Cursor Up (CUU)
+ */
+export const cuu1 = encoder.encode("\x1b[A");
+
+/**
+ * Cursor Up Ps Times (CUU)
+ */
+export function cuu(n: number): Uint8Array {
+  return encoder.encode(`\x1b[${n}A`);
+}
+
+/**
+ * Cursor Down (CUD)
+ */
+export const cud1 = encoder.encode("\x1b[B");
+
+/**
+ * Cursor Down Ps Times (CUD)
+ */
+export function cud(n: number): Uint8Array {
+  return encoder.encode(`\x1b[${n}B`);
+}
+
+/**
+ * Cursor Forward (CUF)
+ */
+export const cuf1 = encoder.encode("\x1b[C");
+
+/**
+ * Cursor Forward Ps Times (CUF)
+ */
+export function cuf(n: number): Uint8Array {
+  return encoder.encode(`\x1b[${n}C`);
+}
+
+/**
+ * Cursor Backward (CUB)
+ */
+export const cub1 = encoder.encode("\x1b[D");
+
+/**
+ * Cursor Backward Ps Times (CUB)
+ */
+export function cub(n: number): Uint8Array {
+  return encoder.encode(`\x1b[${n}D`);
+}
+
+/**
+ * Cursor Position (CUP)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86}
+ */
+export function cup(row: number, col: number): Uint8Array {
+  return encoder.encode(`\x1b[${row};${col}H`);
+}

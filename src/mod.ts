@@ -1,4 +1,4 @@
-export { cup } from "./cup.ts";
+export { cup } from "./cursor.ts";
 export { decrc } from "./decrc.ts";
 export { DECResetMode, decrst } from "./decrst.ts";
 export { decsc } from "./decsc.ts";
