@@ -1,6 +1,12 @@
 import { assertEquals } from "@std/assert";
 
-import { cup } from "../src/mod.ts";
+import { cup, cuu } from "../src/mod.ts";
+
+Deno.test("cuu", () => {
+  const bytes = cuu(10);
+
+  assertEquals(bytes, new TextEncoder().encode("\x1b[10A"));
+});
 
 Deno.test("cup", () => {
   const bytes = cup(1, 1);
