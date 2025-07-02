@@ -77,6 +77,16 @@ const cuf1: Uint8Array;
 function cuf(n: number): Uint8Array;
 ```
 
+[Cursor Backward (CUB)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-D.1C84)
+
+Syntax
+
+```ts ignore
+const cub1: Uint8Array;
+
+function cub(n: number): Uint8Array;
+```
+
 [Cursor Position (CUP)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps;Ps-H.1D86)
 
 Syntax
