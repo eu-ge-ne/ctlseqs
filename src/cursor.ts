@@ -3,14 +3,14 @@ import { encoder } from "./encoder.ts";
 /**
  * Cursor Up (CUU)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81}
  */
 export const cuu1 = encoder.encode("\x1b[A");
 
 /**
  * Cursor Up Ps Times (CUU)
  *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#}
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81}
  */
 export function cuu(n: number): Uint8Array {
   return encoder.encode(`\x1b[${n}A`);
