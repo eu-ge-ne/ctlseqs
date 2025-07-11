@@ -16,6 +16,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
   - [`decset() / decrst()`](#decset--decrst)
   - [`sgr()`](#sgr)
   - [`ech()`](#ech)
+  - [`osc52()`](#osc52)
 - [Links](#links)
 - [License](#license)
 
@@ -149,6 +150,16 @@ Syntax
 
 ```ts ignore
 function ech(n: number): Uint8Array;
+```
+
+### `osc52()`
+
+[Manipulate Selection Data (OSC52)](https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Operating-System-Commands:OSC-Ps;Pt-ST:Ps-=-5-2.101B)
+
+Syntax
+
+```ts ignore
+function osc52(text: string): Uint8Array;
 ```
 
 ## Links
