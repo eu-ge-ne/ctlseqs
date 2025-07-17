@@ -75,7 +75,9 @@ export function cup(ln: number, col: number): Uint8Array {
 }
 
 /**
- * Report Cursor Position (CPR)
+ * Report Cursor Position (CPR) request
+ *
+ * @see {@link https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06}
  */
 export const cpr_req = encoder.encode(CSI + "6n");
 
@@ -83,7 +85,9 @@ export const cpr_req = encoder.encode(CSI + "6n");
 const CPR_RES_RE = /\x1b\[(\d+);(\d+)R/;
 
 /**
- * Report Cursor Position (CPR)
+ * Parse Report Cursor Position (CPR) response
+ *
+ * @see {@link https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06}
  */
 export function parse_cpr_res(bytes: Uint8Array): [number, number] | undefined {
   const match = decoder.decode(bytes).match(CPR_RES_RE);
