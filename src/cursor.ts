@@ -93,7 +93,7 @@ export function cup(ln: number, col: number): Uint8Array {
  *
  * @see {@link https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06}
  */
-export const cpr_req = encoder.encode(CSI + "6n");
+export const cpr_req: Uint8Array = encoder.encode(CSI + "6n");
 
 // deno-lint-ignore no-control-regex
 const CPR_RES_RE = /\x1b\[(\d+);(\d+)R/;

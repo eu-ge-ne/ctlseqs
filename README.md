@@ -111,6 +111,22 @@ Syntax
 function cup(ln: number, col: number): Uint8Array;
 ```
 
+[Report Cursor Position (CPR) request](https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06)
+
+Syntax
+
+```ts ignore
+const cpr_req: Uint8Array;
+```
+
+[Parse Report Cursor Position (CPR) response](https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06)
+
+Syntax
+
+```ts ignore
+function parse_cpr_res(bytes: Uint8Array): [number, number] | undefined;
+```
+
 ### `decset() / decrst()`
 
 [DEC Private Mode Set (DECSET)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-?-Pm-h.1D0E)
