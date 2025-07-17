@@ -1,4 +1,4 @@
-import { encoder } from "./encoder.ts";
+import { encoder } from "./codec.ts";
 
 /**
  * Restore Cursor (DECRC)

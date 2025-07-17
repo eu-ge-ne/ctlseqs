@@ -1,4 +1,4 @@
-import { empty, encoder } from "./encoder.ts";
+import { empty, encoder } from "./codec.ts";
 
 /**
  * DEC Private Mode Reset (DECRST)

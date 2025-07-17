@@ -11,7 +11,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
 - [API](#api)
   - [`ris`](#ris)
   - [`el`](#el)
-  - [`cuu() / cud() / cuf() / cub() / cup()`](#cuu--cud--cuf--cub--cup)
+  - [`cursor`](#cursor)
   - [`decsc / decrc`](#decsc--decrc)
   - [`decset() / decrst()`](#decset--decrst)
   - [`sgr()`](#sgr)
@@ -46,7 +46,7 @@ const el1: Uint8Array;
 const el2: Uint8Array;
 ```
 
-### `cuu() / cud() / cuf() / cub() / cup()`
+### `cursor`
 
 [Cursor Up (CUU)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81)
 
@@ -93,7 +93,7 @@ function cub(n: number): Uint8Array;
 Syntax
 
 ```ts ignore
-function cup(row: number, col: number): Uint8Array;
+function cup(ln: number, col: number): Uint8Array;
 ```
 
 ### `decsc / decrc`
