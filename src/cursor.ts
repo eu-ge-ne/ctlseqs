@@ -1,5 +1,19 @@
 import { decoder, encoder } from "./codec.ts";
-import { CSI } from "./c1.ts";
+import { CSI, ESC } from "./c1.ts";
+
+/**
+ * Save Cursor (DECSC)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65}
+ */
+export const decsc: Uint8Array = encoder.encode(ESC + "7");
+
+/**
+ * Restore Cursor (DECRC)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66}
+ */
+export const decrc: Uint8Array = encoder.encode(ESC + "8");
 
 /**
  * Cursor Up (CUU)
