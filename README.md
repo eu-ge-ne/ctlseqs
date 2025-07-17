@@ -12,7 +12,6 @@ XTerm Control Sequences for Node.js, Deno and Bun.
   - [`ris`](#ris)
   - [`el`](#el)
   - [`cursor`](#cursor)
-  - [`decsc / decrc`](#decsc--decrc)
   - [`decset() / decrst()`](#decset--decrst)
   - [`sgr()`](#sgr)
   - [`ech()`](#ech)
@@ -47,6 +46,22 @@ const el2: Uint8Array;
 ```
 
 ### `cursor`
+
+[Save Cursor (DECSC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65)
+
+Syntax
+
+```ts ignore
+const decsc: Uint8Array;
+```
+
+[Restore Cursor (DECRC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66)
+
+Syntax
+
+```ts ignore
+const decrc: Uint8Array;
+```
 
 [Cursor Up (CUU)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81)
 
@@ -94,24 +109,6 @@ Syntax
 
 ```ts ignore
 function cup(ln: number, col: number): Uint8Array;
-```
-
-### `decsc / decrc`
-
-[Save Cursor (DECSC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65)
-
-Syntax
-
-```ts ignore
-const decsc: Uint8Array;
-```
-
-[Restore Cursor (DECRC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66)
-
-Syntax
-
-```ts ignore
-const decrc: Uint8Array;
 ```
 
 ### `decset() / decrst()`
