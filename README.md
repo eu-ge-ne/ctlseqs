@@ -11,8 +11,7 @@ XTerm Control Sequences for Node.js, Deno and Bun.
 - [API](#api)
   - [`ris`](#ris)
   - [`el`](#el)
-  - [`cuu() / cud() / cuf() / cub() / cup()`](#cuu--cud--cuf--cub--cup)
-  - [`decsc / decrc`](#decsc--decrc)
+  - [`cursor`](#cursor)
   - [`decset() / decrst()`](#decset--decrst)
   - [`sgr()`](#sgr)
   - [`ech()`](#ech)
@@ -46,7 +45,23 @@ const el1: Uint8Array;
 const el2: Uint8Array;
 ```
 
-### `cuu() / cud() / cuf() / cub() / cup()`
+### `cursor`
+
+[Save Cursor (DECSC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65)
+
+Syntax
+
+```ts ignore
+const decsc: Uint8Array;
+```
+
+[Restore Cursor (DECRC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66)
+
+Syntax
+
+```ts ignore
+const decrc: Uint8Array;
+```
 
 [Cursor Up (CUU)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-A.1C81)
 
@@ -93,25 +108,23 @@ function cub(n: number): Uint8Array;
 Syntax
 
 ```ts ignore
-function cup(row: number, col: number): Uint8Array;
+function cup(ln: number, col: number): Uint8Array;
 ```
 
-### `decsc / decrc`
-
-[Save Cursor (DECSC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-7.C65)
+[Report Cursor Position (CPR) request](https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06)
 
 Syntax
 
 ```ts ignore
-const decsc: Uint8Array;
+const cpr_req: Uint8Array;
 ```
 
-[Restore Cursor (DECRC)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Controls-beginning-with-ESC:ESC-8.C66)
+[Parse Report Cursor Position (CPR) response](https://www.invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-n:Ps-=-6.1E06)
 
 Syntax
 
 ```ts ignore
-const decrc: Uint8Array;
+function parse_cpr_res(bytes: Uint8Array): [number, number] | undefined;
 ```
 
 ### `decset() / decrst()`

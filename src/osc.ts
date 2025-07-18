@@ -1,4 +1,4 @@
-import { encoder } from "./encoder.ts";
+import { encoder } from "./codec.ts";
 
 /**
  * Manipulate Selection Data (OSC52)

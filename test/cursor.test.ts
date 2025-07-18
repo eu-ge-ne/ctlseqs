@@ -1,6 +1,6 @@
 import { assertEquals } from "@std/assert";
 
-import { cub, cud, cuf, cup, cuu } from "../src/mod.ts";
+import { cub, cud, cuf, cup, cuu, parse_cpr_res } from "../src/mod.ts";
 
 Deno.test("cuu", () => {
   const bytes = cuu(1);
@@ -30,4 +30,10 @@ Deno.test("cup", () => {
   const bytes = cup(1, 1);
 
   assertEquals(bytes, new TextEncoder().encode("\x1b[1;1H"));
+});
+
+Deno.test("cpr", () => {
+  const pos = parse_cpr_res(new TextEncoder().encode("\x1b[9;11R"));
+
+  assertEquals(pos, [9, 11]);
 });
