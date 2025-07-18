@@ -1,5 +1,5 @@
 import { decoder, encoder } from "./codec.ts";
-import { CSI, ESC } from "./c1.ts";
+import { CSI, ESC } from "./cchar.ts";
 
 /**
  * Save Cursor (DECSC)
