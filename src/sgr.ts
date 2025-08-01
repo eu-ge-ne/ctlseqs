@@ -57,14 +57,14 @@ export function sgr(...attrs: SGRAttr[]): Uint8Array {
 /**
  * SGR 256 Color
  */
-export type Color256 = [number, number, number];
+export type SGRColor256 = [number, number, number];
 
 /**
  * Set foreground color using RGB values (SGR)
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
  */
-export function sgr_256_fg(fg: Color256): Uint8Array {
+export function sgr_256_fg(fg: SGRColor256): Uint8Array {
   return encoder.encode(CSI + "38;2;" + fg.join(";") + "m");
 }
 
@@ -73,7 +73,7 @@ export function sgr_256_fg(fg: Color256): Uint8Array {
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
  */
-export function sgr_256_bg(bg: Color256): Uint8Array {
+export function sgr_256_bg(bg: SGRColor256): Uint8Array {
   return encoder.encode(CSI + "48;2;" + bg.join(";") + "m");
 }
 
@@ -82,7 +82,7 @@ export function sgr_256_bg(bg: Color256): Uint8Array {
  *
  * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
  */
-export function sgr_256_bf(bg: Color256, fg: Color256): Uint8Array {
+export function sgr_256_bf(bg: SGRColor256, fg: SGRColor256): Uint8Array {
   return encoder.encode(
     CSI + "48;2;" + bg.join(";") + "m" +
       CSI + "38;2;" + fg.join(";") + "m",
