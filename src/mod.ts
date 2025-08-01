@@ -19,4 +19,4 @@ export { ech } from "./ech.ts";
 export { el0, el1, el2 } from "./el.ts";
 export { osc52 } from "./osc.ts";
 export { ris } from "./ris.ts";
-export { sgr, SGRAttr, type SGRColor } from "./sgr.ts";
+export { sgr, sgr_256_bf, sgr_256_bg, sgr_256_fg, SGRAttr } from "./sgr.ts";
