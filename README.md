@@ -152,7 +152,31 @@ function decrst(...modes: DECResetMode[]): Uint8Array;
 Syntax
 
 ```ts ignore
-function sgr(...attrs: (SGRAttr | SGRColor)[]): Uint8Array;
+function sgr(...attrs: SGRAttr[]): Uint8Array;
+```
+
+[Set foreground color using RGB values (SGR)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7)
+
+Syntax
+
+```ts ignore
+function sgr_256_fg(fg: Color256): Uint8Array;
+```
+
+[Set background color using RGB values (SGR)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7)
+
+Syntax
+
+```ts ignore
+function sgr_256_bg(bg: Color256): Uint8Array;
+```
+
+[Set background & foreground color using RGB values (SGR)](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7)
+
+Syntax
+
+```ts ignore
+function sgr_256_bf(bg: Color256, fg: Color256): Uint8Array;
 ```
 
 ### `ech()`

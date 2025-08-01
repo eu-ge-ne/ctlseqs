@@ -1,38 +1,8 @@
+import { CSI } from "./cchar.ts";
 import { encoder } from "./codec.ts";
 
 /**
- * Character Attributes (SGR)
- *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
- */
-export function sgr(...attrs: (SGRAttr | SGRColor)[]): Uint8Array {
-  const y = attrs.map((x) => {
-    if (typeof x === "number") {
-      return x;
-    } else {
-      const [c, r, g, b] = x;
-
-      if (c === "fg") {
-        return `38;2;${r};${g};${b}`;
-      } else {
-        return `48;2;${r};${g};${b}`;
-      }
-    }
-  });
-  return encoder.encode(`\x1b[${y.join(";")}m`);
-}
-
-/**
- * SGR RGB color
- *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
- */
-export type SGRColor = ["fg" | "bg", number, number, number];
-
-/**
  * SGR Attributes
- *
- * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
  */
 export const enum SGRAttr {
   Default = 0,
@@ -73,4 +43,48 @@ export const enum SGRAttr {
   BgCyan = 46,
   BgWhite = 47,
   BgDefault = 49,
+}
+
+/**
+ * Character Attributes (SGR)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
+ */
+export function sgr(...attrs: SGRAttr[]): Uint8Array {
+  return encoder.encode(CSI + attrs.join(";") + "m");
+}
+
+/**
+ * SGR 256 Color
+ */
+export type SGRColor256 = [number, number, number];
+
+/**
+ * Set foreground color using RGB values (SGR)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
+ */
+export function sgr_256_fg(fg: SGRColor256): Uint8Array {
+  return encoder.encode(CSI + "38;2;" + fg.join(";") + "m");
+}
+
+/**
+ * Set background color using RGB values (SGR)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
+ */
+export function sgr_256_bg(bg: SGRColor256): Uint8Array {
+  return encoder.encode(CSI + "48;2;" + bg.join(";") + "m");
+}
+
+/**
+ * Set background & foreground color using RGB values (SGR)
+ *
+ * @see {@link https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Pm-m.1CA7}
+ */
+export function sgr_256_bf(bg: SGRColor256, fg: SGRColor256): Uint8Array {
+  return encoder.encode(
+    CSI + "48;2;" + bg.join(";") + "m" +
+      CSI + "38;2;" + fg.join(";") + "m",
+  );
 }

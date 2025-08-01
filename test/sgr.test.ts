@@ -1,6 +1,12 @@
 import { assertEquals } from "@std/assert";
 
-import { sgr, SGRAttr } from "../src/mod.ts";
+import {
+  sgr,
+  sgr_256_bf,
+  sgr_256_bg,
+  sgr_256_fg,
+  SGRAttr,
+} from "../src/mod.ts";
 
 Deno.test("sgr", () => {
   const bytes = sgr();
@@ -20,14 +26,23 @@ Deno.test("sgr bold", () => {
   assertEquals(bytes, new TextEncoder().encode("\x1b[1m"));
 });
 
-Deno.test("sgr fg", () => {
-  const bytes = sgr(["fg", 0xff, 0xff, 0xff]);
+Deno.test("sgr 256 fg", () => {
+  const bytes = sgr_256_fg([0xff, 0xff, 0xff]);
 
   assertEquals(bytes, new TextEncoder().encode("\x1b[38;2;255;255;255m"));
 });
 
-Deno.test("sgr bg", () => {
-  const bytes = sgr(["bg", 0xff, 0xff, 0xff]);
+Deno.test("sgr 256 bg", () => {
+  const bytes = sgr_256_bg([0xff, 0xff, 0xff]);
 
   assertEquals(bytes, new TextEncoder().encode("\x1b[48;2;255;255;255m"));
+});
+
+Deno.test("sgr 256 bg fg", () => {
+  const bytes = sgr_256_bf([0xff, 0xff, 0xff], [0xff, 0xff, 0xff]);
+
+  assertEquals(
+    bytes,
+    new TextEncoder().encode("\x1b[48;2;255;255;255m\x1b[38;2;255;255;255m"),
+  );
 });
